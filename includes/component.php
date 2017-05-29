@@ -172,13 +172,9 @@ class BP_Bookmarklet_Component extends BP_Component {
 
 		<p class="bookmarklet-button-wrapper">
 			<a class="bp-bookmarklet button" onclick="return false;" href="<?php echo bp_bookmarklet_get_bookmarklet_link( $name ); ?>"><span><?php printf( esc_html__( 'Bookmark on %s', 'bp-bookmarklet' ), $name ); ?></span></a>
-			<button type="button" class="bp-bookmarklet button" aria-expanded="false" aria-controls="bookmarklet-code-wrap">
-				<span class="dashicons dashicons-clipboard"></span>
-				<span class="bp-screen-reader-text"><?php _e( 'Copy &#8220;Bookmarklet This&#8221; code', 'bp-bookmarklet' ) ?></span>
-			</button>
 		</p>
 
-		<div class="bookmarklet-hidden" id="bookmarklet-code-wrap">
+		<div class="bookmarklet-visible" id="bookmarklet-code-wrap">
 			<p id="bookmarklet-code-desc">
 				<?php esc_html_e( 'If you can&#8217;t drag the bookmarklet to your bookmarks, copy the following code and create a new bookmark. Paste the code into the new bookmark&#8217;s URL field.', 'bp-bookmarklet' ) ?>
 			</p>
